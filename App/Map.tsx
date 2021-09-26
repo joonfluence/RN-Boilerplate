@@ -1,21 +1,8 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
 import React from 'react';
 import {View} from 'react-native';
 import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
 
-type Props = {
-  title?: string;
-};
-
-const STORYBOOK_START = false;
-
-const App = () => {
+function App() {
   return (
     <>
       <View style={{flex: 1}}>
@@ -32,8 +19,6 @@ const App = () => {
       </View>
     </>
   );
-};
+}
 
-const module = STORYBOOK_START ? require('../storybook').default : App;
-
-export default module;
+export default App;
