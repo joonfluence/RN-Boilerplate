@@ -5,7 +5,6 @@
  * @format
  * @flow strict-local
  */
-
 import React, {FC, PropsWithChildren} from 'react';
 import {
   SafeAreaView,
@@ -28,6 +27,8 @@ import {
 type Props = {
   title?: string;
 };
+
+const STORYBOOK_START = true;
 
 const Section: FC<PropsWithChildren<Props>> = ({children, title}) => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -112,4 +113,6 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+const module = STORYBOOK_START ? require('../storybook').default : App;
+
+export default module;

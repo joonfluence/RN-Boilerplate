@@ -13,12 +13,15 @@
     "prestorybook": "rnstl"
   },
   "dependencies": {
+    "mobx": "^6.3.3",
+    "mobx-react": "^7.2.0",
     "react": "17.0.2",
     "react-native": "0.65.1",
     "react-native-storybook-loader": "^2.0.4"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
+    "@babel/plugin-proposal-decorators": "^7.15.4",
     "@babel/runtime": "^7.12.5",
     "@react-native-community/eslint-config": "^2.0.0",
     "@storybook/addon-actions": "^5.3",
@@ -44,5 +47,13 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "config": {
+    "react-native-storybook-loader": {
+      "searchDir": [
+        "./App"
+      ],
+      "pattern": "**/*.stories.js"
+    }
   }
 }
